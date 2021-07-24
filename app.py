@@ -4,20 +4,18 @@ import requests
 import alpaca_trade_api as tradeapi
 import pandas as pd
 
-
-# def trade_bot(symbol, drop_tick, raise_tick):
-    # holding_df = holdings_df[holdings_df.ticker == list(trading_dict.keys())[j]]
-    # if holding_df['percent_change'].astype('float32')[0] <= drop_tick:
+#would use the weekly change calculated in the main method and comapre that to the users accepted tick changes
+#and then sell or buy if it meets the accepted tick changes
+# def trade_bot(symbol, change,drop_tick, raise_tick):
+    # if change <= drop_tick:
     #     buy_string = 'Buying ' + str(holding_df['ticker'][0]) + ' at ' + time.ctime()
     #     print(buy_string)
-    #     r.orders.order_buy_market(holding_df['ticker'][0],1,timeInForce= 'gfd')
     # else:
     #     print('Nothing to buy')
 
-    # if holding_df['percent_change'].astype('float32')[0] >= raise_tick:
+    # if change >= raise_tick:
     #     sell_string = 'Buying ' + str(holding_df['ticker'][0]) + ' at ' + time.ctime()
     #     print(sell_string)
-    #     r.orders.order_sell_market(holding_df['ticker'][0],1,timeInForce= 'gfd')
     # else:
     #     print('Nothing to sell')
 
